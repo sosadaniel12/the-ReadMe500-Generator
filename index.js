@@ -65,4 +65,8 @@ inquirer
     },
   ])
 
-  .then((data) => {});
+  .then((data) => {
+    fs.writeFile("output.json", JSON.stringify(data), (err) =>
+      err ? console.log(err) : console.log("Success!")
+    );
+  });
