@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const { title } = require("process");
 
 inquirer
   .prompt([
@@ -12,6 +13,18 @@ inquirer
           return true;
         } else {
           return "Please enter a title name";
+        }
+      },
+    },
+    {
+      type: "input",
+      message: "Describe why the application was made for?",
+      name: "description",
+      validate: (description) => {
+        if (description) {
+          return true;
+        } else {
+          return "Please enter a description";
         }
       },
     },
@@ -101,13 +114,58 @@ inquirer
       name: "email",
     },
   ])
+  .then(
+    ({
+      titleName,
+      installation,
+      usageInfo,
+      contributingGuide,
+      testInstructions,
+      license,
+      gitHub,
+      email,
+    }) => {
+      const template = `# ${titleName}
 
-  .then((data) => {
-    fs.writeFile("output.json", JSON.stringify(data), (err) =>
-      err ? console.log(err) : console.log("Success!")
-    );
-  });
+    ${installation}
+    ## Usage
+    ${usageInfo}
+    ## Contribution
+    ${contributingGuide}
+    ### Instructions
+    ${testInstructions}
+    ## License
+    ${license}
+    ## GitHub
+    ${gitHub}
+    ## Email
+    ${email}`;
+      createNewFile(titleName, template);
+    }
+  );
+function createNewFile(fileName, data) {
+  fs.writeFile(
+    `./${fileName.toLowerCase().split(" ").join("")}.md`,
+    data,
+    (err) => {
+      if (err) {
+        console.log(err);
+      }
+      console.log("Successful!");
+    }
+  );
+}
+//   .then((data) => {
+//     fs.writeFile("output.json", JSON.stringify(data), (err) =>
+//       err ? console.log(err) : console.log("Success!")
+//     );
+//   });
 
+// getLicenseBadge = (choices) => {
+//   if (choices === "Apache License 2.0") {
+//     return "[![License Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)";
+//   }
+// };
 // for (let question of inquirer) {
 //   console.log(question);
 // }
