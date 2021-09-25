@@ -54,6 +54,11 @@ inquirer
     },
     {
       type: "input",
+      message: "Who contributed on the project?",
+      name: "credits",
+    },
+    {
+      type: "input",
       message: "What are contributing guidelines?",
       name: "contributingGuide",
       validate: (contribute) => {
@@ -117,30 +122,59 @@ inquirer
   .then(
     ({
       titleName,
+      description,
       installation,
       usageInfo,
+      credits,
       contributingGuide,
       testInstructions,
       license,
       gitHub,
       email,
     }) => {
-      const template = `# ${titleName}
+      const mkTemplate = `# ${titleName}
 
+      ## Description
+      ${description}
+
+      ## Table of Contents
+
+    -[Installation](#installation)
+    -[Usage](#usage)
+    -[Credits](#credits)
+    -[License](#license)
+    -[Contact](#contact)
+
+    ## Installation
     ${installation}
+
     ## Usage
     ${usageInfo}
-    ## Contribution
-    ${contributingGuide}
-    ### Instructions
-    ${testInstructions}
-    ## License
+    
+    ## Credits
+    ${credits}
+
+    ### License
     ${license}
-    ## GitHub
+
+    ---
+
+    ## Badges
+
+    ## How to Contribute 
+    ${contributingGuide}
+
+    ## Test
+    ${testInstructions}
+
+    ## Contact
+
+    - GitHub
     ${gitHub}
-    ## Email
+
+    - Email
     ${email}`;
-      createNewFile(titleName, template);
+      createNewFile(titleName, mkTemplate);
     }
   );
 function createNewFile(fileName, data) {
@@ -155,17 +189,3 @@ function createNewFile(fileName, data) {
     }
   );
 }
-//   .then((data) => {
-//     fs.writeFile("output.json", JSON.stringify(data), (err) =>
-//       err ? console.log(err) : console.log("Success!")
-//     );
-//   });
-
-// getLicenseBadge = (choices) => {
-//   if (choices === "Apache License 2.0") {
-//     return "[![License Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)";
-//   }
-// };
-// for (let question of inquirer) {
-//   console.log(question);
-// }
