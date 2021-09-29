@@ -90,7 +90,7 @@ inquirer
       },
     },
     {
-      type: "lsit",
+      type: "list",
       message: "What license are you using?",
       name: "license",
       choices: [
