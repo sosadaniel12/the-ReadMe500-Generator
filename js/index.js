@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { title } = require("process");
+const generateBadges = require("./badges");
+const getGitHubLink = require("./gitHub");
 
 inquirer
   .prompt([
@@ -56,6 +57,13 @@ inquirer
       type: "input",
       message: "Who contributed on the project?",
       name: "credits",
+      validate: (credits) => {
+        if (credits) {
+          return true;
+        } else {
+          return "Pleas enter the credit section";
+        }
+      },
     },
     {
       type: "input",
@@ -82,8 +90,8 @@ inquirer
       },
     },
     {
-      type: "list",
-      message: "What licenses are you using?",
+      type: "lsit",
+      message: "What license are you using?",
       name: "license",
       choices: [
         "Apache License 2.0",
@@ -99,18 +107,12 @@ inquirer
         "GNU Lesser General Public License v2.1",
         "Mozilla Public License 2.0",
         "The Unlicense",
+        "None",
       ],
-      validate: (license) => {
-        if (license === 0) {
-          return "Please pick one";
-        } else {
-          return true;
-        }
-      },
     },
     {
       type: "input",
-      message: "Enter your GitHib username",
+      message: "Enter your GitHub username",
       name: "gitHub",
     },
     {
@@ -133,17 +135,21 @@ inquirer
       email,
     }) => {
       const mkTemplate = `# ${titleName}
+      ${generateBadges(license)}
 
       ## Description
       ${description}
 
       ## Table of Contents
-
+    -[Description](#description)
     -[Installation](#installation)
     -[Usage](#usage)
     -[Credits](#credits)
     -[License](#license)
-    -[Contact](#contact)
+    -[Badges](#badges) 
+    -[Contributing](#contributing)
+    -[Tests](#tests)
+    -[Questions](#questions)
 
     ## Installation
     ${installation}
@@ -160,18 +166,20 @@ inquirer
     ---
 
     ## Badges
+    ${generateBadges(license)}
 
-    ## How to Contribute 
+    ## Contributing 
     ${contributingGuide}
 
     ## Test
     ${testInstructions}
 
-    ## Contact
+    ## Questions
 
     - GitHub
     ${gitHub}
-
+    ${getGitHubLink(gitHub)}
+  
     - Email
     ${email}`;
       createNewFile(titleName, mkTemplate);
