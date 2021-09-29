@@ -2,7 +2,7 @@
       [![Unlicense](https://img.shields.io/badge/License-Unlicense-blue.svg)](https://unlicense.org/)
 
       ## Description
-      to help others build a professional readme
+      to help others build professional readme
 
       ## Table of Contents
     -[Description](#description)
@@ -16,10 +16,10 @@
     -[Questions](#questions)
 
     ## Installation
-    with node.js
+    thur node.js
 
     ## Usage
-    through the command line in bash
+    through the command line with bash
     
     ## Credits
     Daniel Sosa
@@ -33,10 +33,10 @@
     [![Unlicense](https://img.shields.io/badge/License-Unlicense-blue.svg)](https://unlicense.org/)
 
     ## Contributing 
-    Be a rockstar back-end developer
+    Being awesome
 
     ## Test
-    Using Jest 
+    Using unit test
 
     ## Questions
 
