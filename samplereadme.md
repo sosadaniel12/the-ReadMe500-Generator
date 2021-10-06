@@ -1,8 +1,9 @@
-# Sample readme
-      [![Unlicense](https://img.shields.io/badge/License-Unlicense-blue.svg)](https://unlicense.org/)
+# sampleReadMe
+
+    [[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)]!
 
       ## Description
-      to help others build professional readme
+      this was built to better make a readme for effectively and effiectly.
 
       ## Table of Contents
     -[Description](#description)
@@ -10,39 +11,40 @@
     -[Usage](#usage)
     -[Credits](#credits)
     -[License](#license)
-    -[Badges](#badges) 
+    -[Badges](#badges)
     -[Contributing](#contributing)
     -[Tests](#tests)
     -[Questions](#questions)
 
     ## Installation
-    thur node.js
+    Node.js
 
     ## Usage
-    through the command line with bash
-    
+    command-line
+
     ## Credits
     Daniel Sosa
 
     ### License
-    The Unlicense
+
+    EPL 1.0
 
     ---
 
     ## Badges
-    [![Unlicense](https://img.shields.io/badge/License-Unlicense-blue.svg)](https://unlicense.org/)
+    [[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)]
 
-    ## Contributing 
-    Being awesome
+    ## Contributing
+    Noen
 
     ## Test
-    Using unit test
+    None
 
     ## Questions
 
     - GitHub
     sosadaniel12
     https://github.com/sosadaniel12
-  
+
     - Email
-    danielsosa2121@gmail.com
+    danielsosa2121@gmial.com

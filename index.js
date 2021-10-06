@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateBadges = require("./badges");
-const getGitHubLink = require("./gitHub");
+const generateBadges = require("./utils/badges");
+const getGitHubLink = require("./utils/gitHub");
 
 inquirer
   .prompt([
@@ -134,8 +134,9 @@ inquirer
       gitHub,
       email,
     }) => {
+      const getBadge = generateBadges(license);
       const mkTemplate = `# ${titleName}
-      ${generateBadges(license)}
+      ${getBadge}
 
       ## Description
       ${description}
@@ -166,7 +167,7 @@ inquirer
     ---
 
     ## Badges
-    ${generateBadges(license)}
+    ${getBadge}
 
     ## Contributing 
     ${contributingGuide}
