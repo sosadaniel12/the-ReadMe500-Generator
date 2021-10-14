@@ -1,50 +1,67 @@
 # sampleReadMe
 
-    [[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)]!
+![Npm package license](https://badgen.net/npm/license/discord.js)
 
-      ## Description
-      this was built to better make a readme for effectively and effiectly.
+## Description
 
-      ## Table of Contents
-    -[Description](#description)
-    -[Installation](#installation)
-    -[Usage](#usage)
-    -[Credits](#credits)
-    -[License](#license)
-    -[Badges](#badges)
-    -[Contributing](#contributing)
-    -[Tests](#tests)
-    -[Questions](#questions)
+to make a good professional readme
 
-    ## Installation
-    Node.js
+## Table of Contents
 
-    ## Usage
-    command-line
+[Description](#description)
 
-    ## Credits
-    Daniel Sosa
+[Installation](#installation)
 
-    ### License
+[Usage](#usage)
 
-    EPL 1.0
+[Credits](#credits)
 
-    ---
+[License](#license)
 
-    ## Badges
-    [[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)]
+[Badges](#badges) 
 
-    ## Contributing
-    Noen
+[Contributing](#contributing)
 
-    ## Test
-    None
+[Tests](#tests)
 
-    ## Questions
+[Questions](#questions)
 
-    - GitHub
-    sosadaniel12
-    https://github.com/sosadaniel12
+## Installation
 
-    - Email
-    danielsosa2121@gmial.com
+in Node.js
+
+## Usage
+
+thru the command line
+
+## Credits
+
+Daniel Sosa
+
+### License
+
+Apache License 2.0
+---
+## Badges
+
+![Npm package license](https://badgen.net/npm/license/discord.js)
+
+## Contributing 
+
+none
+
+## Test
+
+none
+
+## Questions
+
+- GitHub
+
+sosadaniel12
+
+https://github.com/sosadaniel12
+
+- Email
+
+danielsosa2121@gmail.com

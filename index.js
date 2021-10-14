@@ -136,53 +136,73 @@ inquirer
     }) => {
       const getBadge = generateBadges(license);
       const mkTemplate = `# ${titleName}
-      ${getBadge}
 
-      ## Description
-      ${description}
+${getBadge}
 
-      ## Table of Contents
-    -[Description](#description)
-    -[Installation](#installation)
-    -[Usage](#usage)
-    -[Credits](#credits)
-    -[License](#license)
-    -[Badges](#badges) 
-    -[Contributing](#contributing)
-    -[Tests](#tests)
-    -[Questions](#questions)
+## Description
 
-    ## Installation
-    ${installation}
+${description}
 
-    ## Usage
-    ${usageInfo}
-    
-    ## Credits
-    ${credits}
+## Table of Contents
 
-    ### License
-    ${license}
+[Description](#description)
 
-    ---
+[Installation](#installation)
 
-    ## Badges
-    ${getBadge}
+[Usage](#usage)
 
-    ## Contributing 
-    ${contributingGuide}
+[Credits](#credits)
 
-    ## Test
-    ${testInstructions}
+[License](#license)
 
-    ## Questions
+[Badges](#badges) 
 
-    - GitHub
-    ${gitHub}
-    ${getGitHubLink(gitHub)}
-  
-    - Email
-    ${email}`;
+[Contributing](#contributing)
+
+[Tests](#tests)
+
+[Questions](#questions)
+
+## Installation
+
+${installation}
+
+## Usage
+
+${usageInfo}
+
+## Credits
+
+${credits}
+
+### License
+
+${license}
+---
+## Badges
+
+${getBadge}
+
+## Contributing 
+
+${contributingGuide}
+
+## Test
+
+${testInstructions}
+
+## Questions
+
+- GitHub
+
+${gitHub}
+
+${getGitHubLink(gitHub)}
+
+- Email
+
+${email}
+`;
       createNewFile(titleName, mkTemplate);
     }
   );
