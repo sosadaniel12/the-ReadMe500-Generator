@@ -195,7 +195,7 @@ ${getBadge}
 
 ${contributingGuide}
 
-##Deployment
+## Deployment
 
 ${deployLink}
 
