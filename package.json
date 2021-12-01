@@ -4,7 +4,7 @@
   "description": "I will be building a readme generator using node.js as the backend. HTML to display the actual generator. By building this generator a user will be to give small chunks of information via the command line to make a good professional readme for a project.",
   "main": "index.js",
   "dependencies": {
-    "inquirer": "^8.1.5",
+    "inquirer": "^8.2.0",
     "request": "^2.88.2",
     "require": "^2.4.20"
   },

@@ -79,6 +79,11 @@ inquirer
     },
     {
       type: "input",
+      message: "What is the deployment link?",
+      name: "deployLink",
+    },
+    {
+      type: "input",
       message: "What are the test instructions?",
       name: "testInstructions",
       validate: (test) => {
@@ -133,6 +138,7 @@ inquirer
       license,
       gitHub,
       email,
+      deployLink,
     }) => {
       const getBadge = generateBadges(license);
       const mkTemplate = `# ${titleName}
@@ -158,6 +164,8 @@ ${description}
 [Badges](#badges) 
 
 [Contributing](#contributing)
+
+[Deployment](#deployment)
 
 [Tests](#tests)
 
@@ -186,6 +194,10 @@ ${getBadge}
 ## Contributing 
 
 ${contributingGuide}
+
+##Deployment
+
+${deployLink}
 
 ## Test
 
